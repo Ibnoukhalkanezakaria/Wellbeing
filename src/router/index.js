@@ -1,32 +1,55 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import BoxesView from "../views/BoxesView.vue";
-
-const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/boxes",
-    name: "boxes",
-    component: BoxesView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-];
+import { scrollPage } from '../smoothScroll';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes: [
+  { path: "/", component: () => import("../views/reference/HomeV2Page.vue"), meta: { title: "Bloomwell - by ibnoukhalkane" } },
+  { path: "/about", component: () => import("../views/reference/AboutV1Page.vue"), meta: { title: "About - Bloomwell by ibnoukhalkane" } },
+  { path: "/classes", component: () => import("../views/reference/ClassesPage.vue"), meta: { title: "Classes - Bloomwell by ibnoukhalkane" } },
+  { path: "/instructors", component: () => import("../views/reference/InstructorsPage.vue"), meta: { title: "Instructors - Bloomwell by ibnoukhalkane" } },
+  { path: "/events", component: () => import("../views/reference/EventsPage.vue"), meta: { title: "Events - Bloomwell by ibnoukhalkane" } },
+  { path: "/contact", component: () => import("../views/reference/ContactV1Page.vue"), meta: { title: "Contact - Bloomwell by ibnoukhalkane" } },
+  { path: "/blogs", component: () => import("../views/reference/BlogsPage.vue"), meta: { title: "Blogs - Bloomwell by ibnoukhalkane" } },
+  { path: "/schedule", component: () => import("../views/reference/SchedulePage.vue"), meta: { title: "Schedule - Bloomwell by ibnoukhalkane" } },
+  { path: "/testimonials", component: () => import("../views/reference/TestimonialsPage.vue"), meta: { title: "Testimonials - Bloomwell by ibnoukhalkane" } },
+  { path: "/privacy-policy", component: () => import("../views/reference/PrivacyPolicyPage.vue"), meta: { title: "Privacy Policy - Bloomwell by ibnoukhalkane" } },
+  { path: "/licenses", component: () => import("../views/reference/LicensesPage.vue"), meta: { title: "Licenses - Bloomwell by ibnoukhalkane" } },
+  { path: "/changelog", component: () => import("../views/reference/ChangelogPage.vue"), meta: { title: "Changelog - Bloomwell by ibnoukhalkane" } },
+  { path: "/instructions", component: () => import("../views/reference/InstructionsPage.vue"), meta: { title: "Instructions - Bloomwell by ibnoukhalkane" } },
+  { path: "/style-guide", component: () => import("../views/reference/StyleGuidePage.vue"), meta: { title: "Style Guide - Bloomwell by ibnoukhalkane" } },
+  { path: "/404", component: () => import("../views/reference/404Page.vue"), meta: { title: "404 Page Not Found - Bloomwell by ibnoukhalkane" } },
+  { path: "/blog/creating-a-sacred-evening-routine-for-deep-restful-sleep", component: () => import("../views/reference/BlogCreatingASacredEveningRoutineForDeepRestfulSleepPage.vue"), meta: { title: "Sacred Evening Routine for Restful Sleep | Bloomwell" } },
+  { path: "/blog/the-science-of-conscious-breathing-how-to-calm-your-nervous-system", component: () => import("../views/reference/BlogTheScienceOfConsciousBreathingHowToCalmYourNervousSystemPage.vue"), meta: { title: "Conscious Breathing for a Calmer Nervous System | Bloomwell" } },
+  { path: "/event/weekend-mindful-reset-in-nature", component: () => import("../views/reference/EventWeekendMindfulResetInNaturePage.vue"), meta: { title: "Weekend Mindful Reset in Nature" } },
+  { path: "/event/morning-flow-sound-bath", component: () => import("../views/reference/EventMorningFlowSoundBathPage.vue"), meta: { title: "Morning Flow & Sound Bath" } },
+  { path: "/instructor/clara-holloway", component: () => import("../views/reference/InstructorClaraHollowayPage.vue"), meta: { title: "Clara Holloway" } },
+  { path: "/instructor/sophie-laurent", component: () => import("../views/reference/InstructorSophieLaurentPage.vue"), meta: { title: "Sophie Laurent" } },
+  { path: "/blog/finding-stillness-in-the-middle-of-a-busy-workday", component: () => import("../views/reference/BlogFindingStillnessInTheMiddleOfABusyWorkdayPage.vue"), meta: { title: "Finding Stillness in a Busy Workday | Bloomwell" } },
+  { path: "/instructor/nina-brooks", component: () => import("../views/reference/InstructorNinaBrooksPage.vue"), meta: { title: "Nina Brooks" } },
+  { path: "/blog/the-art-of-unplugging-a-guide-to-digital-detox-weekends", component: () => import("../views/reference/BlogTheArtOfUnpluggingAGuideToDigitalDetoxWeekendsPage.vue"), meta: { title: "Digital Detox Weekends: A Mindful Guide | Bloomwell" } },
+  { path: "/blog/why-gentle-morning-flows-trump-intense-workout-routines", component: () => import("../views/reference/BlogWhyGentleMorningFlowsTrumpIntenseWorkoutRoutinesPage.vue"), meta: { title: "Why Gentle Morning Flows Beat Intense Workouts | Bloomwell" } },
+  { path: "/blog/reflections-from-our-recent-autumn-silent-meditation-retreat", component: () => import("../views/reference/BlogReflectionsFromOurRecentAutumnSilentMeditationRetreatPage.vue"), meta: { title: "Autumn Silent Meditation Retreat Reflections | Bloomwell" } },
+  { path: "/instructor/elena-vance", component: () => import("../views/reference/InstructorElenaVancePage.vue"), meta: { title: "Elena Vance" } },
+  { path: "/event/advanced-core-strength-mobility", component: () => import("../views/reference/EventAdvancedCoreStrengthMobilityPage.vue"), meta: { title: "Advanced Core Strength & Mobility" } },
+  { path: "/instructor/marcus-sterling", component: () => import("../views/reference/InstructorMarcusSterlingPage.vue"), meta: { title: "Marcus Sterling" } },
+  { path: "/class/morning-vinyasa-flow-breath-alignment", component: () => import("../views/reference/ClassMorningVinyasaFlowBreathAlignmentPage.vue"), meta: { title: "Morning Vinyasa Flow & Breath Alignment | Bloomwell" } },
+  { path: "/event/evening-candlelight-meditation-circle", component: () => import("../views/reference/EventEveningCandlelightMeditationCirclePage.vue"), meta: { title: "Evening Candlelight Meditation Circle" } },
+  { path: "/class/acoustic-healing-deep-relaxation", component: () => import("../views/reference/ClassAcousticHealingDeepRelaxationPage.vue"), meta: { title: "Acoustic Healing & Deep Relaxation | Bloomwell" } },
+  { path: "/instructor/julian-hayes", component: () => import("../views/reference/InstructorJulianHayesPage.vue"), meta: { title: "Julian Hayes" } },
+  { path: "/class/core-alignment-posture-correction", component: () => import("../views/reference/ClassCoreAlignmentPostureCorrectionPage.vue"), meta: { title: "Core Alignment & Posture Correction | Bloomwell" } },
+  { path: "/class/nervous-system-reset-deep-breathing", component: () => import("../views/reference/ClassNervousSystemResetDeepBreathingPage.vue"), meta: { title: "Nervous System Reset & Deep Breathing | Bloomwell" } },
+  { path: "/class/evening-wind-down-spine-mobility", component: () => import("../views/reference/ClassEveningWindDownSpineMobilityPage.vue"), meta: { title: "Evening Wind Down & Spine Mobility | Bloomwell" } },
+  { path: "/class/guided-meditation-silence-circle", component: () => import("../views/reference/ClassGuidedMeditationSilenceCirclePage.vue"), meta: { title: "Guided Meditation & Silence Circle | Bloomwell" } },
+    { path: '/home-v2', redirect: '/' },
+    { path: '/about-v1', redirect: '/about' },
+    { path: '/contact-v1', redirect: '/contact' },
+    { path: '/boxes', redirect: '/classes' },
+    { path: '/:pathMatch(.*)*', redirect: '/404' },
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return scrollPage(to, savedPosition);
+  },
 });
-
+router.afterEach(to => { document.title = to.meta.title || 'Bloomwell by ibnoukhalkane'; });
 export default router;

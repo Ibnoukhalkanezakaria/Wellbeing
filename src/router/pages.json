@@ -1,0 +1,187 @@
+[
+  {
+    "path": "/",
+    "component": "HomeV2Page",
+    "title": "Bloomwell - by ibnoukhalkane"
+  },
+  {
+    "path": "/about",
+    "component": "AboutV1Page",
+    "title": "About V1 - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/classes",
+    "component": "ClassesPage",
+    "title": "Classes - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/instructors",
+    "component": "InstructorsPage",
+    "title": "Instructors - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/events",
+    "component": "EventsPage",
+    "title": "Events - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/contact",
+    "component": "ContactV1Page",
+    "title": "Contact V1 - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/blogs",
+    "component": "BlogsPage",
+    "title": "Blogs - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/schedule",
+    "component": "SchedulePage",
+    "title": "Schedule - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/testimonials",
+    "component": "TestimonialsPage",
+    "title": "Testimonials - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/privacy-policy",
+    "component": "PrivacyPolicyPage",
+    "title": "Privacy Policy - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/licenses",
+    "component": "LicensesPage",
+    "title": "Licenses - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/changelog",
+    "component": "ChangelogPage",
+    "title": "Changelog - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/instructions",
+    "component": "InstructionsPage",
+    "title": "Instructions - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/style-guide",
+    "component": "StyleGuidePage",
+    "title": "Style Guide - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/404",
+    "component": "404Page",
+    "title": "404 Page Not Found - Bloomwell by ibnoukhalkane"
+  },
+  {
+    "path": "/blog/creating-a-sacred-evening-routine-for-deep-restful-sleep",
+    "component": "BlogCreatingASacredEveningRoutineForDeepRestfulSleepPage",
+    "title": "Sacred Evening Routine for Restful Sleep | Bloomwell"
+  },
+  {
+    "path": "/blog/the-science-of-conscious-breathing-how-to-calm-your-nervous-system",
+    "component": "BlogTheScienceOfConsciousBreathingHowToCalmYourNervousSystemPage",
+    "title": "Conscious Breathing for a Calmer Nervous System | Bloomwell"
+  },
+  {
+    "path": "/event/weekend-mindful-reset-in-nature",
+    "component": "EventWeekendMindfulResetInNaturePage",
+    "title": "Weekend Mindful Reset in Nature"
+  },
+  {
+    "path": "/event/morning-flow-sound-bath",
+    "component": "EventMorningFlowSoundBathPage",
+    "title": "Morning Flow & Sound Bath"
+  },
+  {
+    "path": "/instructor/clara-holloway",
+    "component": "InstructorClaraHollowayPage",
+    "title": "Clara Holloway"
+  },
+  {
+    "path": "/instructor/sophie-laurent",
+    "component": "InstructorSophieLaurentPage",
+    "title": "Sophie Laurent"
+  },
+  {
+    "path": "/blog/finding-stillness-in-the-middle-of-a-busy-workday",
+    "component": "BlogFindingStillnessInTheMiddleOfABusyWorkdayPage",
+    "title": "Finding Stillness in a Busy Workday | Bloomwell"
+  },
+  {
+    "path": "/instructor/nina-brooks",
+    "component": "InstructorNinaBrooksPage",
+    "title": "Nina Brooks"
+  },
+  {
+    "path": "/blog/the-art-of-unplugging-a-guide-to-digital-detox-weekends",
+    "component": "BlogTheArtOfUnpluggingAGuideToDigitalDetoxWeekendsPage",
+    "title": "Digital Detox Weekends: A Mindful Guide | Bloomwell"
+  },
+  {
+    "path": "/blog/why-gentle-morning-flows-trump-intense-workout-routines",
+    "component": "BlogWhyGentleMorningFlowsTrumpIntenseWorkoutRoutinesPage",
+    "title": "Why Gentle Morning Flows Beat Intense Workouts | Bloomwell"
+  },
+  {
+    "path": "/blog/reflections-from-our-recent-autumn-silent-meditation-retreat",
+    "component": "BlogReflectionsFromOurRecentAutumnSilentMeditationRetreatPage",
+    "title": "Autumn Silent Meditation Retreat Reflections | Bloomwell"
+  },
+  {
+    "path": "/instructor/elena-vance",
+    "component": "InstructorElenaVancePage",
+    "title": "Elena Vance"
+  },
+  {
+    "path": "/event/advanced-core-strength-mobility",
+    "component": "EventAdvancedCoreStrengthMobilityPage",
+    "title": "Advanced Core Strength & Mobility"
+  },
+  {
+    "path": "/instructor/marcus-sterling",
+    "component": "InstructorMarcusSterlingPage",
+    "title": "Marcus Sterling"
+  },
+  {
+    "path": "/class/morning-vinyasa-flow-breath-alignment",
+    "component": "ClassMorningVinyasaFlowBreathAlignmentPage",
+    "title": "Morning Vinyasa Flow & Breath Alignment | Bloomwell"
+  },
+  {
+    "path": "/event/evening-candlelight-meditation-circle",
+    "component": "EventEveningCandlelightMeditationCirclePage",
+    "title": "Evening Candlelight Meditation Circle"
+  },
+  {
+    "path": "/class/acoustic-healing-deep-relaxation",
+    "component": "ClassAcousticHealingDeepRelaxationPage",
+    "title": "Acoustic Healing & Deep Relaxation | Bloomwell"
+  },
+  {
+    "path": "/instructor/julian-hayes",
+    "component": "InstructorJulianHayesPage",
+    "title": "Julian Hayes"
+  },
+  {
+    "path": "/class/core-alignment-posture-correction",
+    "component": "ClassCoreAlignmentPostureCorrectionPage",
+    "title": "Core Alignment & Posture Correction | Bloomwell"
+  },
+  {
+    "path": "/class/nervous-system-reset-deep-breathing",
+    "component": "ClassNervousSystemResetDeepBreathingPage",
+    "title": "Nervous System Reset & Deep Breathing | Bloomwell"
+  },
+  {
+    "path": "/class/evening-wind-down-spine-mobility",
+    "component": "ClassEveningWindDownSpineMobilityPage",
+    "title": "Evening Wind Down & Spine Mobility | Bloomwell"
+  },
+  {
+    "path": "/class/guided-meditation-silence-circle",
+    "component": "ClassGuidedMeditationSilenceCirclePage",
+    "title": "Guided Meditation & Silence Circle | Bloomwell"
+  }
+]
