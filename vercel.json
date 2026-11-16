@@ -4,21 +4,28 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/((?!assets/|img/|js/|css/|.*\\.[^/]+$).*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
+      "src": "/service-worker\\.js",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      },
+      "continue": true
+    },
     {
-      "source": "/service-worker.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(assets|img|js|css)/.*",
+      "status": 404
+    },
+    {
+      "src": "/.*\\.[^/]+$",
+      "status": 404
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
