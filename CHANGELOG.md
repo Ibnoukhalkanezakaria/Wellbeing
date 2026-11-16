@@ -1,5 +1,12 @@
 # Change history
 
+## 2026-11-16 — Warm color palette
+
+- Applied the supplied brown `#443627`, orange `#D98324`, sand `#EFDCAB`, and cream `#F2F6D0` palette across semantic tokens, controls, sections, overlays, SVG branding, and browser/app icons.
+- Updated the live style guide, added color-system documentation, and refreshed the complete project/tool documentation.
+- Verified palette tokens across all 37 routes, representative mobile layouts, navigation, and the production build.
+- Kept photographs and video footage in their original colors.
+
 ## 2026-11-16 — Bloomwell replacement and documentation
 
 ### Website

@@ -4,8 +4,8 @@ module.exports = defineConfig({
   css: { loaderOptions: { css: { url: false } } },
   pwa: {
     name: 'Bloomwell',
-    themeColor: '#1d2524',
-    msTileColor: '#1d2524',
+    themeColor: '#443627',
+    msTileColor: '#443627',
     workboxOptions: { exclude: [/\.map$/, /\.mp4$/, /\.webm$/] },
     iconPaths: { faviconSVG: 'bloomwell-icon.svg' },
   },

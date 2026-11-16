@@ -105,59 +105,31 @@
                 </div>
                 <div class="color-wrap">
                   <div class="color-single-block">
-                    <div class="color-item-box"></div>
+                    <div class="color-item-box palette-brown"></div>
                     <div class="color-details-block">
-                      <div class="color-name">Brand color</div>
-                      <div class="color-code">#edd7472</div>
+                      <div class="color-name">Brown</div>
+                      <div class="color-code">#443627</div>
                     </div>
                   </div>
                   <div class="color-single-block">
-                    <div class="color-item-box two"></div>
+                    <div class="color-item-box palette-orange"></div>
                     <div class="color-details-block">
-                      <div class="color-name">Black</div>
-                      <div class="color-code">#0E0E0E</div>
+                      <div class="color-name">Orange</div>
+                      <div class="color-code">#D98324</div>
                     </div>
                   </div>
                   <div class="color-single-block">
-                    <div class="color-item-box three"></div>
+                    <div class="color-item-box palette-sand"></div>
                     <div class="color-details-block">
-                      <div class="color-name">Body text</div>
-                      <div class="color-code">#231f23</div>
+                      <div class="color-name">Sand</div>
+                      <div class="color-code">#EFDCAB</div>
                     </div>
                   </div>
                   <div class="color-single-block">
-                    <div class="color-item-box four"></div>
+                    <div class="color-item-box palette-cream"></div>
                     <div class="color-details-block">
-                      <div class="color-name">Main BG</div>
-                      <div class="color-code">#FFFFFF</div>
-                    </div>
-                  </div>
-                  <div class="color-single-block">
-                    <div class="color-item-box five"></div>
-                    <div class="color-details-block">
-                      <div class="color-name">2nd BG</div>
-                      <div class="color-code">#F3F1EF</div>
-                    </div>
-                  </div>
-                  <div class="color-single-block">
-                    <div class="color-item-box six"></div>
-                    <div class="color-details-block">
-                      <div class="color-name">Mute</div>
-                      <div class="color-code">#858483</div>
-                    </div>
-                  </div>
-                  <div class="color-single-block">
-                    <div class="color-item-box seven"></div>
-                    <div class="color-details-block">
-                      <div class="color-name">Divider Dark BG</div>
-                      <div class="color-code">#CFCFCF</div>
-                    </div>
-                  </div>
-                  <div class="color-single-block">
-                    <div class="color-item-box eight"></div>
-                    <div class="color-details-block">
-                      <div class="color-name">Divider Light BG</div>
-                      <div class="color-code">#6B6C6E</div>
+                      <div class="color-name">Cream</div>
+                      <div class="color-code">#F2F6D0</div>
                     </div>
                   </div>
                 </div>

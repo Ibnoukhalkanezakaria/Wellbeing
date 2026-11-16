@@ -19,6 +19,8 @@ Reference pages were inspected and their relevant static content and assets were
 | `public/img/icons/*.png` | Favicon, Apple touch, Android/maskable, and Windows tile sizes. |
 | `public/img/icons/safari-pinned-tab.svg` | Pinned-tab flower mark. |
 
+The current brand colors are brown `#443627`, orange `#D98324`, sand `#EFDCAB`, and cream `#F2F6D0`. The flower mark uses orange and the wordmark uses brown. Browser/app PNGs are rendered from the updated SVG flower on cream; the ICO fallback is encoded from the rendered icon. See [the design system](DESIGN_SYSTEM.md).
+
 The Bloomwell wordmarks are vector assets with the flower motif and serif text. Their text uses a Georgia/Times New Roman/serif system-font stack. The browser icon keeps the flower symbol without a wordmark.
 
 The footer credits website customization and development to **ibnoukhalkane**. Renaming the site does not rename the upstream GitHub repository or establish ownership of a new email domain.

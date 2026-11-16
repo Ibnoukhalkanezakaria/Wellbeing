@@ -126,7 +126,7 @@ No subscription request leaves the browser. The Vuex state starts empty on a fre
 
 ## Styles and media
 
-`src/scss/site.css` retains the supplied reference's custom properties, typography, layout classes, variants, and breakpoints. Some historical reference selectors remain even though only one page variant is rendered. `main.scss` contains project-specific overrides for navigation, tabs, controls, carousels, accessibility, and motion.
+`src/scss/site.css` retains the supplied reference's custom properties, typography, layout classes, variants, and breakpoints. Some historical reference selectors remain even though only one page variant is rendered. `src/scss/main/_palette.scss` supplies the brown/orange/sand/cream brand values. See [the color system](DESIGN_SYSTEM.md) for semantic aliases and contrast decisions. `main.scss` contains project-specific overrides for navigation, tabs, controls, carousels, accessibility, and motion.
 
 The `css.loaderOptions.css.url: false` setting leaves `/assets/...` URLs unchanged for static serving. Media files live in `public/assets/` and are copied into the production output. AVIF `srcset` variants support responsive images, while MP4/WebM pairs provide background video formats.
 

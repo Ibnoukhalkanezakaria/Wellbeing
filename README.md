@@ -67,6 +67,14 @@ There is no committed automated test runner or `npm test` script. Browser checks
 
 Bootstrap and both Popper packages are retained from the original project. They are **not imported by the current application entry point**; the present layout and interactions use custom styles, Vue, and browser APIs. See [the complete dependency and tools inventory](docs/TECHNOLOGIES.md) for package versions and how each tool is used.
 
+## Brand palette
+
+| Brown | Orange | Sand | Cream |
+| --- | --- | --- | --- |
+| `#443627` | `#D98324` | `#EFDCAB` | `#F2F6D0` |
+
+The palette is shared through semantic color tokens, with coordinated controls, logos, app icons, and browser metadata. The live style guide displays all four swatches. See [the design system](docs/DESIGN_SYSTEM.md) for token mappings and contrast choices.
+
 ## Project structure
 
 ```text
@@ -87,7 +95,7 @@ Bloomwell (repository: Wellbeing/)
 │   │   └── pages.json         # Page inventory and titles
 │   ├── scss/
 │   │   ├── site.css           # Local reference layout, typography, and tokens
-│   │   └── main/main.scss     # Interaction and responsive overrides
+│   │   └── main/             # main.scss overrides and _palette.scss color tokens
 │   ├── store/index.js         # Vuex newsletter state
 │   ├── views/reference/       # 37 individual Vue page templates
 │   ├── App.vue                # Shared application shell and event handlers
@@ -108,6 +116,7 @@ Bloomwell (repository: Wellbeing/)
 ## Documentation
 
 - [Technologies and tools](docs/TECHNOLOGIES.md): all direct packages, resolved versions, browser APIs, asset tools, and QA tools.
+- [Design system](docs/DESIGN_SYSTEM.md): brand palette, semantic tokens, contrast, and customization.
 - [Architecture and routes](docs/ARCHITECTURE.md): application lifecycle, page inventory, styling, interactions, and data flow.
 - [Development, deployment, and validation](docs/DEVELOPMENT.md): commands, customization, production hosting, PWA behavior, troubleshooting, and checks.
 - [Assets and attribution](docs/ASSETS.md): reference origin, branding, local media, fonts, and third-party materials.

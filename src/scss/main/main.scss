@@ -1,3 +1,5 @@
+@use "palette";
+
 // Reference layout is local; these rules replace runtime Webflow interactions.
 :root { color-scheme: light; }
 html { scroll-behavior: smooth; }
@@ -7,10 +9,11 @@ body { margin: 0; }
 [hidden] { display: none !important; }
 a, button, [role='button'], [role='tab'] { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
-  outline: 2px solid #e87036;
+  outline: 2px solid var(--palette-brown);
   outline-offset: 5px;
+  box-shadow: 0 0 0 7px var(--palette-cream);
 }
-.skip-link { position: fixed; top: -100px; left: 20px; z-index: 9999; padding: 12px 20px; background: #fff; color: #222; }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 9999; padding: 12px 20px; background: var(--palette-cream); color: var(--palette-brown); }
 .skip-link:focus { top: 12px; }
 .nav-dropdown-toggle, .menu-button, .faq-tab-link { cursor: pointer; }
 .dropdown-navigation:not(.w--open) { pointer-events: none; }
@@ -32,7 +35,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .w-slider-mask::-webkit-scrollbar { display: none; }
 .w-slide { white-space: normal; flex-shrink: 0; scroll-snap-align: start; }
 @media (max-width: 991px) {
-  .navigation-wrap.mobile-open { display: block; position: absolute; top: 100%; left: 0; width: 100%; background: #faf9f6; max-height: calc(100dvh - 80px); overflow: auto; padding: 20px; box-shadow: 0 12px 20px #0001; }
+  .navigation-wrap.mobile-open { display: block; position: absolute; top: 100%; left: 0; width: 100%; background: var(--palette-cream); max-height: calc(100dvh - 80px); overflow: auto; padding: 20px; box-shadow: 0 12px 20px #4436271a; }
   .navigation-wrap.mobile-open .navbar-menu-wrap { display: flex; align-items: flex-start; flex-direction: column; }
   .dropdown-navigation { position: static; min-width: 0; width: 100%; transform: none; }
   .hamburger-icon.close { display: none; }
@@ -44,19 +47,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-.navbar .primary-button { background: #556b2f; color: #f0f3e7; }
+.navbar .primary-button { background: var(--palette-orange); color: var(--palette-ink); }
 .navbar .primary-button-bg { display: none; }
 .dropdown-toggle-icon { font-family: inherit !important; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); }
 .dropdown-toggle-icon::before { content: none; }
 .feature-v2-icon.one { opacity: 0; }
 .feature-v2-icon.two { opacity: 1; }
-.feature-v2-card:hover { background: #1d2524; }
-.feature-v2-card:hover .feature-v2-item-title, .feature-v2-card:hover .feature-v2-description { color: #f0f3e7; }
+.feature-v2-card:hover { background: var(--palette-brown); }
+.feature-v2-card:hover .feature-v2-item-title, .feature-v2-card:hover .feature-v2-description { color: var(--palette-cream); }
 .feature-v2-card:hover .feature-v2-icon.one { opacity: 1; }
 .feature-v2-card:hover .feature-v2-icon.two { opacity: 0; }
-.w-checkbox:has(input:checked) .w-checkbox-input--inputType-custom { background: #dceba7; border-color: #556b2f; }
-.w-checkbox:has(input:checked) .w-checkbox-input--inputType-custom::after { content: '✓'; display: block; color: #1d2524; text-align: center; line-height: 1; }
-.w-checkbox:has(input:focus-visible) .w-checkbox-input--inputType-custom { outline: 2px solid #556b2f; outline-offset: 3px; }
+.w-checkbox:has(input:checked) .w-checkbox-input--inputType-custom { background: var(--palette-sand); border-color: var(--palette-brown); }
+.w-checkbox:has(input:checked) .w-checkbox-input--inputType-custom::after { content: '✓'; display: block; color: var(--palette-brown); text-align: center; line-height: 1; }
+.w-checkbox:has(input:focus-visible) .w-checkbox-input--inputType-custom { outline: 2px solid var(--palette-brown); outline-offset: 3px; }
 .class-v2-mask { max-width: none; }
 .class-v2-slide { width: 528px; max-width: calc(100vw - 48px); }
 @media (max-width: 991px) {
@@ -69,3 +72,54 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .reveal-on-scroll { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
   .reveal-on-scroll.is-visible { opacity: 1; transform: none; }
 }
+
+// Orange carries emphasis; dark ink keeps small button/tab labels readable.
+.primary-button, .contact-form-submit, .blog-button {
+  background: var(--palette-orange);
+  color: var(--palette-ink);
+}
+.primary-button-bg { background: var(--palette-orange); }
+.primary-button:hover, .navbar .primary-button:hover, .contact-form-submit:hover, .blog-button:hover {
+  background: var(--palette-brown);
+  color: var(--palette-cream);
+}
+.primary-button:hover .primary-button-bg { background: var(--palette-brown); }
+.primary-button .button-icon-block {
+  background: var(--palette-ink);
+  -webkit-mask: url('/assets/6a7c7ff1d11a0b07a722954d_button-arrow-icon.svg') center / contain no-repeat;
+  mask: url('/assets/6a7c7ff1d11a0b07a722954d_button-arrow-icon.svg') center / contain no-repeat;
+}
+.primary-button:hover .button-icon-block { background: var(--palette-cream); }
+.primary-button .button-icon { visibility: hidden; }
+.schedule-tab-link.w--current, .blog-tab-link.w--current, .class-tab-link.w--current {
+  background: var(--palette-orange);
+  color: var(--palette-ink);
+  border-color: var(--palette-orange);
+}
+.contact-form-submit.event, .contact-form-submit.v3 { color: var(--palette-ink); }
+.contact-form-submit.event:hover { color: var(--palette-cream); }
+.color-item-box.palette-brown { background: var(--palette-brown); }
+.color-item-box.palette-orange { background: var(--palette-orange); }
+.color-item-box.palette-sand { background: var(--palette-sand); }
+.color-item-box.palette-cream { background: var(--palette-cream); border: 1px solid var(--palette-line); }
+// Reuse the reference shapes as alpha masks so their curves follow the tokens.
+.hero-v2-shape-block {
+  background: var(--palette-brown);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.hero-v2-shape-block.top {
+  -webkit-mask-image: url('/assets/6a91295d7ce91e3265db9b6f_top-shape.png');
+  mask-image: url('/assets/6a91295d7ce91e3265db9b6f_top-shape.png');
+}
+.hero-v2-shape-block.bottom {
+  -webkit-mask-image: url('/assets/6a91295ced63c0b65be06b43_bottom-shape.png');
+  mask-image: url('/assets/6a91295ced63c0b65be06b43_bottom-shape.png');
+}
+.hero-v2-shape { visibility: hidden; }
+
+.color-wrap { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 991px) { .color-wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 479px) { .color-wrap { grid-template-columns: minmax(0, 1fr); } }

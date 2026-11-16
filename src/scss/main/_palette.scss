@@ -1,0 +1,13 @@
+// Bloomwell brand palette. Semantic aliases in site.css use these values.
+:root {
+  --palette-brown: #443627;
+  --palette-orange: #D98324;
+  --palette-sand: #EFDCAB;
+  --palette-cream: #F2F6D0;
+  // Brown-derived shades retain readable small text and control boundaries.
+  --palette-ink: #33281D;
+  --palette-muted: #6B523B;
+  --palette-line: #A99572;
+  --palette-brown-alpha: #44362752;
+  --palette-cream-alpha: #F2F6D052;
+}

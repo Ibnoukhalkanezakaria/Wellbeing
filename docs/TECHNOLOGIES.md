@@ -107,10 +107,10 @@ These tools helped inspect, recreate, format, or verify the website. They are no
 | Python | Imported and normalized static content/assets and performed local file checks. |
 | Requests | Downloaded reference page content and media during the import. |
 | Beautiful Soup | Parsed reference HTML, normalized links, and removed remote runtime scripts before generating Vue templates. |
-| Pillow | Resized browser/app bitmap icons during the branding update. |
+| Pillow | Resized the original bitmap icons during the branding update and encoded the ICO fallback from the rendered SVG icon. |
 | Python XML tools | Adapted the flower mark and generated SVG branding assets. |
 | Prettier | Formatted the generated Vue templates in a temporary tool installation. |
-| Playwright | Drove local browser checks for pages, viewport sizes, interactions, scrolling, and branding. |
+| Playwright | Drove browser checks for pages, viewports, interactions, scrolling, branding, and palette consistency; rendered the updated SVG flower into browser/app PNG icon sizes. |
 | Google Chrome | Rendered the live reference, local website, and supplied reference video during visual QA. |
 | Temporary Python HTTP server | Served production output with SPA fallback during production-browser checks. |
 
@@ -129,5 +129,6 @@ Temporary import scripts, browser scripts, and tool installations were kept outs
 | `jsconfig.json` | Editor language settings and alias mapping. |
 | `.gitignore` | Local/build artifacts excluded from version control. |
 | `public/index.html` | Document metadata, title, favicon, and external font stylesheet. |
+| `src/scss/main/_palette.scss` | Four brand colors and supporting shades used by semantic CSS aliases. |
 
 No credentials or environment variables are required for the current frontend. There is no committed CI/CD workflow or application backend configuration. See [development and deployment](DEVELOPMENT.md) for serving requirements and current integration limits.

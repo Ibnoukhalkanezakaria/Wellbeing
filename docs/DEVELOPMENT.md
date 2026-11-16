@@ -37,6 +37,7 @@ Changes to `vue.config.js`, especially PWA icon settings, may require restarting
 | Application name, PWA colors, icon paths | `vue.config.js` |
 | Bloomwell wordmarks | `public/assets/bloomwell-logo.svg`, `bloomwell-logo-large.svg` |
 | Browser icon | `public/bloomwell-icon.svg`; also update ICO/PNG and pinned-tab assets as needed |
+| Brand palette | `src/scss/main/_palette.scss`; see [design system](DESIGN_SYSTEM.md) |
 | Layout tokens or typography | `src/scss/site.css` |
 | Responsive/interaction overrides | `src/scss/main/main.scss` |
 | Scroll speed and anchor offset | `src/smoothScroll.js` |
@@ -112,6 +113,7 @@ The following checks were performed during the implementation and rebrand:
 | Router scrolling | Return to top on navigation checked. |
 | Reduced motion | Lenis disabled when the media preference changed. |
 | Branding | Bloomwell header/footer SVGs, browser title, favicon URL, and mobile layout checked. |
+| Color system | All 37 routes checked for the exact four shared palette values; style-guide swatches, representative desktop/mobile sections, and navigation checked with no runtime errors observed. |
 | JavaScript errors | No runtime errors observed in the final scrolling and representative production-interaction checks. |
 | Local assets | Referenced local asset paths checked for missing files. |
 
