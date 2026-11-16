@@ -36,7 +36,7 @@ To expose the development server to devices on the same network:
 npm run serve -- --host 0.0.0.0 --port 8080
 ```
 
-Node.js and npm are required. The repository does not currently pin a Node version with `engines` or a version-manager file. Use a maintained Node.js release compatible with the existing toolchain and verify installation and builds. The development environment used for the recorded application build had Node.js 12.22.9 and npm 8.5.1; this records that environment rather than recommending that older Node release for a new setup.
+Node.js **24.x** is pinned in `package.json` and `.nvmrc`. With nvm installed, run `nvm install` and `nvm use` before `npm ci`. The deployment configuration uses `npm ci`, `npm run build`, and the `dist/` output directory.
 
 ## Commands
 
@@ -104,6 +104,8 @@ Bloomwell (repository: Wellbeing/)
 │   ├── smoothScroll.js        # Lenis lifecycle and route scrolling
 │   └── registerServiceWorker.js
 ├── docs/                      # Detailed project documentation
+├── vercel.json                # Vercel build, SPA routing, and service-worker caching
+├── .nvmrc                     # Node.js 24
 ├── vue.config.js              # Build, CSS asset URLs, PWA, and Workbox settings
 ├── babel.config.js
 ├── jsconfig.json
@@ -128,7 +130,7 @@ This is a frontend website. It has no application server, database, account syst
 
 Contact forms prepare a `mailto:` link after validation; the visitor must open their email app and send the message. Newsletter interest is saved only on the current device and is not sent to a mailing list. Existing studio addresses, email destinations, telephone numbers, schedules, and content come from the reference and need business-specific configuration before real use.
 
-Production hosting must serve `index.html` for valid application routes because the router uses HTML5 history. See [deployment instructions](docs/DEVELOPMENT.md#production-deployment).
+Production hosting must serve `index.html` for valid application routes because the router uses HTML5 history. Vercel is configured in the committed `vercel.json`; see [Vercel deployment](docs/DEVELOPMENT.md#vercel-deployment). See [deployment instructions](docs/DEVELOPMENT.md#production-deployment).
 
 ## Credits
 

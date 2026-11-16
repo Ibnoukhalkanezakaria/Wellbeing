@@ -79,7 +79,7 @@ The original technology stack was preserved. Lenis was added for the requested s
 
 | Tool | Role |
 | --- | --- |
-| Node.js | Runs Vue CLI, dependency tooling, and optional development automation. |
+| Node.js | Version 24.x pinned in package.json/.nvmrc; runs Vue CLI, dependency tooling, and development automation. |
 | npm | Dependency installation and serve/build/lint scripts. |
 | Git | Version history, staged change review, commits, and pushing the source. |
 | GitHub | Existing remote repository at `Ibnoukhalkanezakaria/Wellbeing`. |
@@ -127,8 +127,10 @@ Temporary import scripts, browser scripts, and tool installations were kept outs
 | `.browserslistrc` | Target browser selection for the build. |
 | `.eslintrc.js` | JavaScript/Vue lint configuration and production console/debugger warnings. |
 | `jsconfig.json` | Editor language settings and alias mapping. |
-| `.gitignore` | Local/build artifacts excluded from version control. |
+| `.gitignore` | Local/build artifacts and the local .vercel project link excluded from version control. |
+| `vercel.json` | Explicit Vue build/install/output configuration, SPA fallback, and service-worker cache header. |
+| `.nvmrc` | Node.js 24 for local version managers. |
 | `public/index.html` | Document metadata, title, favicon, and external font stylesheet. |
 | `src/scss/main/_palette.scss` | Four brand colors and supporting shades used by semantic CSS aliases. |
 
-No credentials or environment variables are required for the current frontend. There is no committed CI/CD workflow or application backend configuration. See [development and deployment](DEVELOPMENT.md) for serving requirements and current integration limits.
+No credentials or environment variables are required for the current frontend. There is no committed GitHub Actions workflow or application backend configuration; Vercel Git deployment is configured through the linked project and vercel.json. See [development and deployment](DEVELOPMENT.md) for serving requirements and current integration limits.

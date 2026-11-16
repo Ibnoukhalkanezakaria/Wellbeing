@@ -1,5 +1,14 @@
 # Change history
 
+## 2026-11-16 — Vercel deployment configuration
+
+- Added explicit Vue framework, npm install/build commands, and dist output configuration.
+- Pinned Node.js 24.x for consistent local/cloud builds.
+- Added SPA routing for page deep links while preserving missing-asset 404s.
+- Set service-worker revalidation headers and ignored local Vercel project-link files.
+- Documented deployment settings and the distinction between separate Vercel project checks.
+
+
 ## 2026-11-16 — Warm color palette
 
 - Applied the supplied brown `#443627`, orange `#D98324`, sand `#EFDCAB`, and cream `#F2F6D0` palette across semantic tokens, controls, sections, overlays, SVG branding, and browser/app icons.

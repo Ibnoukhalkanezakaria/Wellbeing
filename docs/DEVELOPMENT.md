@@ -2,7 +2,7 @@
 
 ## Requirements and installation
 
-Install Node.js, npm, and Git. The project does not pin a Node runtime version. Its application build was verified in the supplied environment using Node.js 12.22.9 and npm 8.5.1; a fresh setup should use a maintained release compatible with these dependencies and validate its build. Browser automation used a separate Node binary and is not required to run the application.
+Install Node.js **24.x**, npm, and Git. The Node major is pinned in both `package.json` (`engines.node`) and `.nvmrc` so local verification and Vercel builds use the same supported runtime. With nvm, run `nvm install` and `nvm use` in the project directory.
 
 ```sh
 git clone git@github.com:Ibnoukhalkanezakaria/Wellbeing.git
@@ -60,7 +60,7 @@ npm ci
 npm run build
 ```
 
-Deploy the contents of `dist/` to a static host. Do not deploy source files or `node_modules/` as the public website. This task pushes source to GitHub; a Git push does not itself deploy the website.
+Deploy the contents of `dist/` to a static host. Do not deploy source files or `node_modules/` as the public website. The connected Vercel Git integration builds deployments when changes are pushed to the linked production branch. A Git push only deploys automatically when that integration is enabled for the relevant project.
 
 The host must:
 
@@ -82,9 +82,23 @@ For a static host that supports a `_redirects` file, an equivalent SPA fallback 
 /* /index.html 200
 ```
 
-Those snippets are hosting examples; neither deployment configuration is installed in this repository. Match them to the selected host and ensure missing assets are not silently treated as application pages.
+Those Nginx and `_redirects` snippets are hosting examples; neither is installed in this repository. Vercel uses the committed configuration below. Match them to the selected host and ensure missing assets are not silently treated as application pages.
 
 The present implementation assumes hosting at the domain root. Although the router uses `process.env.BASE_URL`, media paths such as `/assets/...` and PWA icon paths are root-relative. A deployment under a repository subdirectory requires coordinated asset/base-path changes. Do not assume it will work unchanged on a GitHub Pages project path.
+
+## Vercel deployment
+
+The committed `vercel.json` specifies the Vue framework preset, `npm ci` installation, `npm run build`, and the `dist` output directory. The Node major is pinned to `24.x` by `package.json` and `.nvmrc`.
+
+The SPA rewrite serves `index.html` for application paths, including nested class/blog/event/instructor routes. It excludes the `/assets`, `/img`, `/js`, and `/css` directories and file paths with extensions so missing assets remain 404s. The existing service worker is served with `Cache-Control: public, max-age=0, must-revalidate` to support updates.
+
+For an existing Vercel project, connect this GitHub repository, set the Root Directory to the repository root, and use `main` as the production branch. The committed build/output/framework settings are intended to override corresponding project defaults. A separately configured Root Directory still needs to be correct in Vercel.
+
+The repository currently has multiple Vercel projects posting GitHub checks. A failed check on a duplicate project does not prove that the successful production project is broken. Inspect each project's build logs before changing or removing project integrations. This change does not delete or disconnect any Vercel projects.
+
+When Vercel account access is available, the deployment IDs shown in GitHub check details can be inspected using the Vercel dashboard or `vercel inspect <deployment-id> --logs`. Private logs and project settings require an authenticated Vercel connection. Do not place access tokens in this repository.
+
+Useful references: [Vercel project configuration](https://vercel.com/docs/project-configuration/vercel-json), [Node version selection](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions).
 
 ## Service worker and caching
 
@@ -100,7 +114,7 @@ The following checks were performed during the implementation and rebrand:
 
 | Check | Result / scope |
 | --- | --- |
-| `npm run build` | Passed for the Bloomwell application source. |
+| `npm run build` | Passed for the Bloomwell application source, including a fresh npm install/build under Node 24.15.0 for Vercel configuration verification. |
 | `git diff --check` | Used to check whitespace errors before publication. |
 | Desktop route loading | All 37 canonical page routes loaded during the replacement work. |
 | Mobile layout | Representative home, about, classes, contact, events, blogs, instructors, schedule, and class-detail views checked for horizontal page overflow. |
