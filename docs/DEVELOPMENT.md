@@ -88,7 +88,7 @@ The present implementation assumes hosting at the domain root. Although the rout
 
 ## Vercel deployment
 
-The committed `vercel.json` specifies the Vue framework preset, `npm ci` installation, `npm run build`, and the `dist` output directory. The Node major is pinned to `24.x` by `package.json` and `.nvmrc`.
+The committed `vercel.json` uses Vercel's static/Other framework setting (`framework: null`) with explicit `npm ci` installation, the existing Vue CLI `npm run build`, and the `dist` output directory. Disabling the automatic Vue preset prevents its blanket SPA fallback from turning missing asset requests into successful HTML responses. The Vue application and build tools are unchanged. The Node major is pinned to `24.x` by `package.json` and `.nvmrc`.
 
 The SPA rewrite serves `index.html` for application paths, including nested class/blog/event/instructor routes. It excludes the `/assets`, `/img`, `/js`, and `/css` directories and file paths with extensions so missing assets remain 404s. The existing service worker is served with `Cache-Control: public, max-age=0, must-revalidate` to support updates.
 

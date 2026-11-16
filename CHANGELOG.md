@@ -2,7 +2,7 @@
 
 ## 2026-11-16 — Vercel deployment configuration
 
-- Added explicit Vue framework, npm install/build commands, and dist output configuration.
+- Added explicit Vue CLI install/build commands and dist output configuration, using Vercel's static/Other preset to control SPA routing without an extra automatic asset fallback.
 - Pinned Node.js 24.x for consistent local/cloud builds.
 - Added SPA routing for page deep links while preserving missing-asset 404s.
 - Set service-worker revalidation headers and ignored local Vercel project-link files.
